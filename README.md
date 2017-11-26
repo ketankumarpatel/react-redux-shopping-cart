@@ -76,6 +76,28 @@ const styles =`
 | `ClearCart` | __.rrshoppingcart--button-clear__|
 
 
+#### Programmatic API
+
+A programmatic API can be exposed by retrieving a service and passing in the redux store.
+
+```js
+
+import { createCart } from 'react-redux-shopping-cart';
+
+const cart = createCart(store);
+
+const item = {
+  id: 'foo',
+  price: 1,
+  qty: 1
+};
+
+cart.setCart({items: [item]});
+
+```
+
+
+
 ### Issues
 
 If you find a bug, please file an issue on [issue tracker on GitHub](https://github.com/enesTufekci/react-redux-shopping-cart/issues).
